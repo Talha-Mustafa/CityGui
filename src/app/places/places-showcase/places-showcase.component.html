@@ -1,0 +1,10 @@
+
+    <ul >
+     
+      <li *ngFor="let place of itemList$ | async" class="img">
+          <a [routerLink]="[place.id]">
+          <img src="{{place.imageUrl}}" class="tn" alt="">
+          </a>
+      </li>
+    </ul>
+   

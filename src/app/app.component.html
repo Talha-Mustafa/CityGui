@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">City Guide</a>
+    </div>
+
+    <ul *ngIf="(user|async)?.uid" class="nav navbar-nav navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Hello<span class="caret"></span></a></li>
+        <ul class="dropdown-menu">
+          <li><a routerLink="settings">Settings</a></li>
+          <li><a (click)="logout()">Sign Out</a></li>
+        </ul>
+      </ul>
+  
+    </div>
+</nav>
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset- col-md-2">
+      
+      <ul *ngIf="(user|async)?.uid" class="nav nav-pills nav-stacked">
+          <li><a routerLink="dashboard">Dashboard</a></li>
+          <li><a routerLink="places">Places</a></li>
+          <li><a routerLink="categories">Categories</a></li>
+          <li><a routerLink="pins">Pins</a></li>
+          <li><a routerLink="allreviews">All Reviews</a></li>
+          <li><a routerLink="allratings">All Ratings</a></li>
+          <li><a routerLink="info">Info</a></li>
+          <li><a routerLink="users">Users</a></li>
+          <li><a routerLink="newsaritcles">News Articles</a></li>
+          <li><a routerLink="pushnotifications">Push Notifications</a></li>
+          <li><a routerLink="settings">Settings</a></li>
+          <li><a routerLink="" (click)="logout()">Sign Out</a></li>
+
+      </ul>
+  
+    </div>
+    <div class="col-md-3">
+  <router-outlet></router-outlet>
+
+    </div>
+  </div>
+  

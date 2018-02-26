@@ -1,0 +1,33 @@
+[debug] [2018-01-22T16:41:31.135Z] ----------------------------------------------------------------------
+[debug] [2018-01-22T16:41:31.139Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Talha Mustafa\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-01-22T16:41:31.139Z] CLI Version:   3.9.2
+[debug] [2018-01-22T16:41:31.139Z] Platform:      win32
+[debug] [2018-01-22T16:41:31.139Z] Node Version:  v9.3.0
+[debug] [2018-01-22T16:41:31.139Z] Time:          Mon Jan 22 2018 21:41:31 GMT+0500 (Pakistan Standard Time)
+[debug] [2018-01-22T16:41:31.139Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-22T16:41:31.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-22T16:41:31.159Z] > authorizing via signed-in user
+[debug] [2018-01-22T16:41:31.163Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cityguide-1ee1b  
+ Mon Jan 22 2018 21:41:31 GMT+0500 (Pakistan Standard Time)
+[debug] [2018-01-22T16:41:41.546Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T16:41:41.550Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cityguide-1ee1b/tokens  
+ Mon Jan 22 2018 21:41:41 GMT+0500 (Pakistan Standard Time)
+[debug] [2018-01-22T16:41:43.544Z] <<< HTTP RESPONSE 200
+[info] 
+[debug] [2018-01-22T17:04:37.162Z] ----------------------------------------------------------------------
+[debug] [2018-01-22T17:04:37.165Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Talha Mustafa\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-01-22T17:04:37.165Z] CLI Version:   3.9.2
+[debug] [2018-01-22T17:04:37.165Z] Platform:      win32
+[debug] [2018-01-22T17:04:37.165Z] Node Version:  v9.3.0
+[debug] [2018-01-22T17:04:37.166Z] Time:          Mon Jan 22 2018 22:04:37 GMT+0500 (Pakistan Standard Time)
+[debug] [2018-01-22T17:04:37.166Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-22T17:04:37.192Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-22T17:04:37.194Z] > authorizing via signed-in user
+[debug] [2018-01-22T17:04:37.198Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/cityguide-1ee1b  
+ Mon Jan 22 2018 22:04:37 GMT+0500 (Pakistan Standard Time)
+[debug] [2018-01-22T17:04:40.381Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-22T17:04:40.383Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/cityguide-1ee1b/tokens  
+ Mon Jan 22 2018 22:04:40 GMT+0500 (Pakistan Standard Time)
+[debug] [2018-01-22T17:04:43.643Z] <<< HTTP RESPONSE 200

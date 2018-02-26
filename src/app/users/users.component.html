@@ -1,0 +1,57 @@
+
+  <h1>Users</h1>
+  <br>
+<button type="button" class="btn btn-success btn-md" 
+        (click)="openModal(template)"><span class="glyphicon glyphicon-plus"></span> <b>Add User</b></button>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add User</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+
+
+
+  
+
+      
+      <input type="hidden" name="id" value="-1">
+      <div class="form-group ">
+        <label for="username">UserName</label>
+        <input [(ngModel)]="user.name" type="text" name="username" class="form-control" id="username" placeholder="eg: JohnDoe" value="">
+      </div>
+      <div class="form-group ">
+        <label for="email">Email</label>
+        <input [(ngModel)]="user.email" type="text" name="email" class="form-control" id="email" placeholder="eg: email@gmail.com" value="">
+      </div>
+      <div class="form-group "> 
+        <label for="fbuserid">Facebook user Id</label>
+        <input [(ngModel)]="user.fbuserid" type="text" name="fbuserid" class="form-control" id="fbuserid" placeholder="eg: 12155451455154" value="">
+                            </div>
+                            <div class="form-group "><label for="newpassword">Password</label>
+        <input type="text" [(ngModel)]="user.password" name="newpassword" class="form-control" id="newpassword" placeholder="password" value="">
+      </div>
+      <div class="form-group ">
+        <label [(ngModel)]="user.confirmPassword" for="confirmpassword">Confirm Password</label>
+        <input type="text" name="confirmpassword" class="form-control" id="confirmpassword" placeholder="password" value="">
+      </div>
+      <div class="form-group ">
+        <label for="role">Role</label>
+        <select [(ngModel)]="user.role" name="role" class="form-control" id="selectrole">
+                                  <option value="0" selected="">Admin (Can Edit Users)</option>
+                                  <option value="1">Author</option><option value="2">Normal User</option> 
+                                 </select>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" id="users-modal_namedelete" class="btn btn-danger">Delete</button>
+      <button (click)="signUp()" type="button" id="users-modal_namesave" class="btn btn-primary">Save changes</button>
+    </div>
+     <p *ngIf="msg" class="text-danger">{{msg}}</p>
+  
+</ng-template>

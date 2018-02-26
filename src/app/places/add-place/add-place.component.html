@@ -1,0 +1,290 @@
+<!--
+<button type="button" class="btn btn-info" 
+        (click)="openModal(Template)">Create template modal</button>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        
+   
+<form action="">
+    <div class="form-group">
+        <label for="title">
+            Place Name
+        </label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="placeModelVariable.name" name="name">
+    </div>
+    <div class="form-group">
+        
+        <label for="discription">
+            Place Discription
+        </label><br>
+        <textarea [(ngModel)]="placeModelVariable.placeDiscription" name="discription" id="discription" cols="30" rows="10"></textarea>
+    </div>
+    
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">Details</div>
+      <div class="panel-body">
+          
+        <h4>Featured</h4>
+          <label class="switch">
+          
+            <input name="switch" [(ngModel)]="placeModelVariable.featured" type="checkbox" >
+                <span class="slider round"></span>
+          </label>
+          <h4 class="form-control" style="display:inline">Date And Timme</h4>
+           <input name="datetime" [(ngModel)]="placeModelVariable.submissionDate"  type="datetime-local" name="date">
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Price Details (optional)</div>
+        <div class="panel-body">
+            <div class="form-group">
+            <label  for="priceInNumbers"><b>Price</b></label><br>
+             <input name="priceinnumber" [(ngModel)]="placeModelVariable.price" type="number" class="form-control" id="priceInNumbers" placeholder="0">
+            </div>
+
+            <div class="form-group">
+            <label for="priceInSuffix"><b>Price Suffix</b></label><br>
+             <input name="priceinsuffix" [(ngModel)]="placeModelVariable.priceSuffix" type="text" class="form-control" id="priceInSuffix" placeholder="e.g: per night">
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Location</div>
+        <div class="panel-body">
+            <div class="form-group">
+
+                <label for="address"><b>Address</b></label><br>
+                <input [(ngModel)]="placeModelVariable.address" name="address" type="address" class="form-control" id="address" placeholder="Enter Your Property Address">
+                <br>
+                <label for="contactNumber"><b>Phone Number</b></label><br>
+                <input [(ngModel)]="placeModelVariable.number" name="number" type="number" class="form-control" id="contactNumber" placeholder="Eg: +00112345678">
+                <br>
+                <label for="email"><b>Eail Address</b></label><br>
+                <input [(ngModel)]="placeModelVariable.email" name="email" type="email" class="form-control" id="emailAddress" placeholder="Eg: john@place.com">
+                <br>
+                <label for="mapLocation"><b>Map Location</b></label><br>
+                <label for="longitude"></label>
+                <input class="form-control" type="text" name="longitude" [(ngModel)]="placeModelVariable.longitude"><br>
+                <label for="latitude"></label>
+                <input class="form-control" type="text" name="latitude" [(ngModel)]="placeModelVariable.latitude">
+               <br>
+                <label for="pin"><b>Select A Pin</b></label><br>
+                <select [(ngModel)]="placeModelVariable.pin" class="form-control" name="pin" id="pin">
+                    <option value="Beaches">Beaches</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="shop">Shop</option>
+                    <option value="restuarent">Restuarent</option>
+                    <option value="park">Park</option>
+                    <option value="archeologicalSite">Archeological Site</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Media</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="image"><b>Featured Images (600*300)</b></label><br>
+                    <input type="file" (change)="handleFiles($event)" ><br>
+                    <button (click)="uploadFiles()" class="btn btn-success btn-sm">Upload</button>
+                    <h5>Upload Progress: {{upload?.progress}}% Completed</h5>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Category</div>
+            <div class="panel-body">
+                <label for="category"><b>(Ctrl-click to deselect item)</b></label><br>
+                <select [(ngModel)]="placeModelVariable.category" class="form-control" name="category" id="cagegory">
+                    <option value="museums" selected>Museums</option>
+                    <option value="restaurants">Restuarents</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="archeology">Archeology</option>
+                    <option value="beaches">Beaches</option>
+                    <option value="parks">Parks</option>
+                </select>
+
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label  for="pushNotificationChekbox"><b>Send Push Notifications</b></label>
+            <input [(ngModel)]="placeModelVariable.sendPushnotification" type="checkbox" id="pushNoti" name="pushNoti">
+            
+            
+        </div>
+         <a href="#"><button class="btn btn-md">Close</button></a>
+       
+        <a href="#"><button class="btn btn-danger btn-md">Delete</button></a>
+       <input type="submit" class="btn btn-success btn-md" (click)="show()"> 
+</form>
+
+    </div>
+</ng-template>
+-->
+
+
+
+<button type="button" class="btn btn-success btn-md" 
+        (click)="openModal(template)"><span class="glyphicon glyphicon-plus"></span> <b>Place</b></button>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Edit Place</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        
+
+
+
+
+<form action="">
+    <div class="form-group">
+        <label for="title">
+            Place Name
+        </label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="placeModelVariable.name" name="name">
+    </div>
+    <div class="form-group">
+        
+        <label for="discription">
+            Place Discription
+        </label><br>
+        <textarea [(ngModel)]="placeModelVariable.placeDiscription" name="discription" id="discription" cols="30" rows="10"></textarea>
+    </div>
+    
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">Details</div>
+      <div class="panel-body">
+          
+        <h4>Featured</h4>
+          <label class="switch">
+          
+            <input name="switch" [(ngModel)]="placeModelVariable.featured" type="checkbox" >
+                <span class="slider round"></span>
+          </label>
+          <h4 class="form-control" style="display:inline">Date And Timme</h4>
+           <input name="datetime" [(ngModel)]="placeModelVariable.submissionDate"  type="datetime-local" name="date">
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Price Details (optional)</div>
+        <div class="panel-body">
+            <div class="form-group">
+            <label  for="priceInNumbers"><b>Price</b></label><br>
+             <input name="priceinnumber" [(ngModel)]="placeModelVariable.price" type="number" class="form-control" id="priceInNumbers" placeholder="0">
+            </div>
+
+            <div class="form-group">
+            <label for="priceInSuffix"><b>Price Suffix</b></label><br>
+             <input name="priceinsuffix" [(ngModel)]="placeModelVariable.priceSuffix" type="text" class="form-control" id="priceInSuffix" placeholder="e.g: per night">
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Location</div>
+        <div class="panel-body">
+            <div class="form-group">
+
+                <label for="address"><b>Address</b></label><br>
+                <input [(ngModel)]="placeModelVariable.address" name="address" type="address" class="form-control" id="address" placeholder="Enter Your Property Address">
+                <br>
+                <label for="contactNumber"><b>Phone Number</b></label><br>
+                <input [(ngModel)]="placeModelVariable.number" name="number" type="number" class="form-control" id="contactNumber" placeholder="Eg: +00112345678">
+                <br>
+                <label for="email"><b>Eail Address</b></label><br>
+                <input [(ngModel)]="placeModelVariable.email" name="email" type="email" class="form-control" id="emailAddress" placeholder="Eg: john@place.com">
+                <br>
+                <label for="mapLocation"><b>Map Location</b></label><br>
+                <label for="longitude"></label>
+                <input class="form-control" type="text" name="longitude" [(ngModel)]="placeModelVariable.longitude"><br>
+                <label for="latitude"></label>
+                <input class="form-control" type="text" name="latitude" [(ngModel)]="placeModelVariable.latitude">
+               <br>
+                <label for="pin"><b>Select A Pin</b></label><br>
+                <select [(ngModel)]="placeModelVariable.pin" class="form-control" name="pin" id="pin">
+                    <option value="Beaches">Beaches</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="shop">Shop</option>
+                    <option value="restuarent">Restuarent</option>
+                    <option value="park">Park</option>
+                    <option value="archeologicalSite">Archeological Site</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Media</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="image"><b>Featured Images (600*300)</b></label><br>
+                    <input type="file" (change)="handleFiles($event)" ><br>
+                    <button (click)="uploadFiles()" class="btn btn-success btn-sm">Upload</button>
+                    <h5>Upload Progress: {{upload?.progress}}% Completed</h5>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Category</div>
+            <div class="panel-body">
+                <label for="category"><b>(Ctrl-click to deselect item)</b></label><br>
+                <select [(ngModel)]="placeModelVariable.category" class="form-control" name="category" id="cagegory">
+                    <option value="museums" selected>Museums</option>
+                    <option value="restaurants">Restuarents</option>
+                    <option value="hotels">Hotels</option>
+                    <option value="archeology">Archeology</option>
+                    <option value="beaches">Beaches</option>
+                    <option value="parks">Parks</option>
+                </select>
+
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label  for="pushNotificationChekbox"><b>Send Push Notifications</b></label>
+            <input [(ngModel)]="placeModelVariable.sendPushnotification" type="checkbox" id="pushNoti" name="pushNoti">
+            
+            
+        </div>
+         <a href="#"><button class="btn btn-md">Close</button></a>
+       
+        <a href="#"><button class="btn btn-danger btn-md">Delete</button></a>
+       <input type="submit" class="btn btn-success btn-md" (click)="show()"> 
+</form>
+
+    </div>
+</ng-template>
